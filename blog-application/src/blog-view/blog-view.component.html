@@ -1,0 +1,10 @@
+<div class="blogs-body">
+    <div class="blog-header">
+        <b>
+            Current Blogs
+        </b>
+    </div>
+    @for(current of blogs; track current.id){
+        <app-blog (removeBlog)="onRemove($event)" [currentBlog]="current"/>
+    }
+</div>
